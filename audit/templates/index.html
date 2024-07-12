@@ -1,0 +1,185 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>UNT</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    {{context.name}}-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>UNT</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form id="excelForm" enctype="multipart/form-data">-->
+<!--        <input type="file" id="excelFile" accept=".xls,.xlsx"><br><br>-->
+<!--        <label for="field1">Наименование подразделения:</label>-->
+<!--        <input type="Наименование подразделения" id="field1" name="field1"><br><br>-->
+
+<!--        <label for="field2">Краткое описание обнаружения:</label>-->
+<!--        <input type="Краткое описание обнаружения" id="field2" name="field2"><br><br>-->
+
+<!--        <label for="field3">Рекомендация подразделения внутреннего аудита:</label>-->
+<!--        <input type="Рекомендация подразделения внутреннего аудита" id="field3" name="field3"><br><br>-->
+
+<!--        <label for="field4">Мероприятие по исплнению рекомендации подразделения внутреннего аудита:</label>-->
+<!--        <input type="Мероприятие по исплнению рекомендации подразделения внутреннего аудита" id="field4" name="field4"><br><br>-->
+
+<!--        <label for="field5">Форма звершения:</label>-->
+<!--        <input type="Форма звершения" id="field5" name="field5"><br><br>-->
+
+<!--        <label for="field6">Срок исполнения:</label>-->
+<!--        <input type="Срок исполнения" id="field6" name="field6"><br><br>-->
+
+<!--        <label for="field7">Выполнено:</label>-->
+<!--        <input type="Выполнено" id="field7" name="field7"><br><br>-->
+
+<!--        <label for="field8">Выполнено не в установленный срок:</label>-->
+<!--        <input type="Выполнено не в установленный срок" id="field8" name="field8"><br><br>-->
+
+<!--        <label for="field9">Не выполнено:</label>-->
+<!--        <input type="Не выполнено" id="field9" name="field9"><br><br>-->
+
+<!--        <label for="field10">Снято с контроля:</label>-->
+<!--        <input type="Снято с контроля" id="field10" name="field10"><br><br>-->
+
+<!--        <label for="field11">Перенесено:</label>-->
+<!--        <input type="Перенесено" id="field11" name="field11"><br><br>-->
+
+<!--        <button type="button" onclick="handleExcel()">Отправить</button>-->
+<!--    </form>-->
+<!--    <div id="excelTable"></div>-->
+
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>-->
+<!--    <script>-->
+<!--        function handleExcel() {-->
+<!--            var fileInput = document.getElementById('excelFile');-->
+<!--            var file = fileInput.files[0];-->
+
+<!--            if (file) {-->
+<!--                var reader = new FileReader();-->
+
+<!--                reader.onload = function(e) {-->
+<!--                    var data = new Uint8Array(e.target.result);-->
+<!--                    var workbook = XLSX.read(data, {type: 'array'});-->
+
+<!--                    var html = XLSX.write(workbook, {sheet: 'Sheet1', type: 'string', bookType: 'html'});-->
+<!--                    document.getElementById('excelTable').innerHTML = html;-->
+<!--                };-->
+
+<!--                reader.readAsArrayBuffer(file);-->
+<!--            } else {-->
+<!--                alert('Выберите файл Excel для загрузки.');-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>UNT</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form id="excelForm" enctype="multipart/form-data">-->
+<!--        <input type="file" id="excelFile" accept=".xls,.xlsx"><br><br>-->
+<!--        <label for="field1">Наименование подразделения:</label>-->
+<!--        <input type="text" id="field1" name="field1"><br><br>-->
+
+<!--        <label for="field2">Краткое описание обнаружения:</label>-->
+<!--        <input type="text" id="field2" name="field2"><br><br>-->
+
+<!--        <label for="field3">Рекомендация подразделения внутреннего аудита:</label>-->
+<!--        <input type="text" id="field3" name="field3"><br><br>-->
+
+<!--        <label for="field4">Мероприятие по исполнению рекомендации подразделения внутреннего аудита:</label>-->
+<!--        <input type="text" id="field4" name="field4"><br><br>-->
+
+<!--        <label for="field5">Форма завершения:</label>-->
+<!--        <input type="text" id="field5" name="field5"><br><br>-->
+
+<!--        <label for="field6">Срок исполнения:</label>-->
+<!--        <input type="text" id="field6" name="field6"><br><br>-->
+
+<!--        <label for="field7">Выполнено:</label>-->
+<!--        <input type="checkbox" id="field7" name="field7" value="true"><br><br>-->
+
+<!--        <label for="field8">Выполнено не в установленный срок:</label>-->
+<!--        <input type="checkbox" id="field8" name="field8" value="true"><br><br>-->
+
+<!--        <label for="field9">Не выполнено:</label>-->
+<!--        <input type="checkbox" id="field9" name="field9" value="true"><br><br>-->
+
+<!--        <label for="field10">Снято с контроля:</label>-->
+<!--        <input type="checkbox" id="field10" name="field10" value="true"><br><br>-->
+
+<!--        <label for="field11">Перенесено:</label>-->
+<!--        <input type="checkbox" id="field11" name="field11" value="true"><br><br>-->
+
+<!--        <button type="button" onclick="handleExcel()">Отправить</button>-->
+<!--    </form>-->
+<!--    <div id="excelTable"></div>-->
+
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>-->
+<!--    <script>-->
+<!--        function handleExcel() {-->
+<!--            var fileInput = document.getElementById('excelFile');-->
+<!--            var file = fileInput.files[0];-->
+
+<!--            if (file) {-->
+<!--                var reader = new FileReader();-->
+
+<!--                reader.onload = function(e) {-->
+<!--                    var data = new Uint8Array(e.target.result);-->
+<!--                    var workbook = XLSX.read(data, {type: 'array'});-->
+
+<!--                    var html = XLSX.write(workbook, {sheet: 'Sheet1', type: 'string', bookType: 'html'});-->
+<!--                    document.getElementById('excelTable').innerHTML = html;-->
+<!--                };-->
+
+<!--                reader.readAsArrayBuffer(file);-->
+<!--            } else {-->
+<!--                alert('Выберите файл Excel для загрузки.');-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form id="Form" action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+
+
